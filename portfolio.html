@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo {
+            font-size: 25px;
+            color: #FFF8DC;
+            font-weight: 600; 
+            transition: 0.3s ease;
+        }
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            color: #FFF8DC;
+            transition: 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #A52A2A;
+            border-bottom: 3px solid #A52A2A;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 150px 12%;
+            background-color: #FFF8DC;
+        }
+        .home-content {
+            flex: 1;
+        }
+        .home-content h3 {
+            font-size: 34px;
+        }
+        .home-content h1 {
+            font-size: 62px;
+            line-height: 1.2;
+        }
+        .home-content p {
+            font-size: 18px;
+            margin: 25px 0 30px;
+        }
+        .btn-box {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .img-box img {
+            width: 600px;
+            border-radius: 50%;
+        }
+
+        .personalinfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12% 8%;
+            gap: 10em;
+            background: black;
+        }
+        .personalinfo-img img {
+            position: relative;
+            width: 550px;
+            box-shadow: 0 0 25px #A52A2A,
+                        0 0 50px #A52A2A;
+            border-radius: 50%;
+        }
+        .home-img img {
+            position: relative;
+            width: 550px;
+            box-shadow: 0 0 100px black,
+                        0 0 90px wheat;
+            border-radius: 50%;
+        }
+        .personalinfo-content h2 {
+            text-align: left;
+            color: #FFF8DC;
+            font-size: 42px;
+            margin: 0.5em 0 1em;
+            margin-left: -19px;
+        }
+        .personalinfo-content ul li {
+            color: #FFF8DC;
+            font-size: 16px;
+            margin-bottom: 10px;
+            list-style-type: circle;
+        }
+        .personalinfo-content ul li strong {
+        color: #A52A2A;
+        }
+        body {
+            background-color: #FFF8DC;
+        }
+
+        .hobbies-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 12%;
+            background-color: wheat;
+        }
+        .hobbies-blocks {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .hobby {
+            flex: 1;
+            margin: 0 10px;
+            background-color: #A52A2A;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .hobby img {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 5%;
+            background-color: #FFF8DC;
+        }
+        .contact-section h1 {
+            color: #FFF8DC;
+            background-color: black;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .contact-section ol {
+            color: black;
+            font-size: 30px;
+            line-height: 2;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .contact-section a {
+            color: #A52A2A;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+            background-color: wheat;
+        }
+        .footer ul {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>SABINA</span> SAGALOVA</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#personalinfo">Personal Information</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Welcome to My Portfolio!</h3>
+            <h1>I am <span>Sabina<br></span>a bachelor student</h1>
+            <p style="font-family: 'Verdana', sans-serif;">Currently pursuing a degree in Software Engineering at Astana IT University</p>
+            <div class="btn-box">
+                <a href="index.html" class="btn-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-circle-fill" viewBox="0 0 16 16">
+                        <path d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"/>
+                      </svg> Movie Moon</a>
+                <div class="dropdown">
+                    <button class="btn btn-2 dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-dots-fill" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg> Contact Me
+                    </button>
+                      <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="231624@astanait.edu.kz">Email</a></li>
+                      <li><a class="dropdown-item" href="https://www.instagram.com/vwrlu?igsh=Nnc0dnJvYTc4bG4=">Instagram</a></li>
+                      <li><a class="dropdown-item" href="https://t.me/vwrlu">Telegram</a></li>
+                      <li><a class="dropdown-item" href="+7 775 760 0911">Phone Number</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        <div class="home-img"> 
+            <img src="images/myphoto.jpg" alt="Photo">
+        </div>
+    </section>
+
+    <section class="personalinfo" id="personalinfo">
+        <div class="personalinfo-img">
+            <img src="images/Picture.jpeg" alt="">
+        </div>
+        <div class="personalinfo-content">
+            <h2 class="heading">Personal <span>Information</span></h2>
+            <ul>
+                <li><strong>Date of Birth:</strong> March 27, 2006</li>
+                <li><strong>Place of Birth:</strong> Aktobe, Kazakhstan</li>
+                <li><strong>Graduation School:</strong> School-gymnasium №2 </li>
+                <li><strong>University:</strong> Astana IT University</li>
+                <li><strong>Current Degree:</strong> Bachelor of Software Engineering</li>
+                <li><strong>Interests:</strong> Web Development, Programming, Reading, Drawing</li>
+                <li><strong>Fun Fact:</strong> An army-fan of the Korean band BTS</li>
+            </ul>
+        </div>
+        
+    </section>
+
+    <section class="hobbies-section" id="hobbies">
+        <a href="#" class="logo2" style="font-size: 45px;">MY HOBBIES</a>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                    <img src="./images/piano.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Music of my soul</h5>
+                        <p class="card-text">I started playing the piano at the age of 8 and graduated from music school with honors. Now playing this instrument helps me to take my mind off my thoughts and preferably I play modern music</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                    <img src="./images/cook.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sweetie Baking</h5>
+                        <p class="card-text">for me, baking is a kind of useful activity, at the end of which you can still enjoy something sweet for tea. if you're interested, just email me and I'll send you a couple of recipes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                    <img src="./images/art.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Art aesthetics</h5>
+                        <p class="card-text">I usually draw with simple pencils on a piece of paper, mostly characters from different anime or cartoons</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="alert-container">
+        <div class="alert alert-danger" role="alert">
+            My contact details are provided below. If you have urgent questions or suggestions, I strongly recommend contacting me through them!
+        </div>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <h1>Contact Me</h1>
+        <ol>
+            <li>Email: <a href="231624@astanait.edu.kz">231624@astanait.edu.kz</a></li>
+            <hr>
+            <li>Instagram: <a href="https://www.instagram.com/vwrlu?igsh=Nnc0dnJvYTc4bG4=">@vwrlu</a></li>
+            <hr>
+            <li>Telegram: <a href="https://t.me/vwrlu">@vwrlu</a></li>
+            <hr>
+            <li>Phone Number: <span>+7 775 760 0911</span></li>
+        </ol>
+        <a href="#home" class="btn-1" style="text-align: center; display: block; max-width: 200px;">Back to Top</a>
+    </section>
+
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Personal Information</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Hobbies</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact me</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2024 Astana IT University, Inc</p>
+        </footer>
+      </div>
+</body>
+</html>

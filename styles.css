@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    padding: 30px 12%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; 
+    
+}
+.logo{
+    font-size: 25px;
+    color: #FFF8DC;
+    font-weight: 600; 
+    transition: 0.3s ease;
+}
+.logo:hover{
+    color: #A52A2A;
+    text-shadow: 0 0 25px #A52A2A,
+                 0 0 50px #A52A2A;
+    transform: scale(1.1);
+}
+span{
+    color: #A52A2A;
+}
+.navbar a{
+    color: #FFF8DC;
+    margin: 0 20px;
+    transition: 0.3s ease;
+}
+.navbar a:hover {
+    color: #A52A2A;
+    border-bottom: 3px solid #A52A2A;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: #FFF8DC;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.home-content h3{
+    font-size: 34px;
+}
+.home-content h1{
+    font-size: 62px;
+    line-height: 1.2;
+}
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 400px;
+    display: flex;
+    gap: 2em;
+}
+.img-box img {
+    width: 600px; 
+    height: auto;
+    border-radius: 8px;
+    margin-top: -60px;
+}
+.btn-1{
+    padding: 15px 10px;
+    background-color: black;
+    color: #FFF8DC;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background-color: #FFF8DC;
+    color: black;
+    border: 2px solid black;
+}
+.btn-2{
+    padding: 15px 28px;
+    background-color: #A52A2A;
+    color: #FFF8DC;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-2:hover{
+    background-color: #FFF8DC;
+    color: #A52A2A;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.logo2{
+    font-size: 45px;
+    color: black;
+    font-weight: 600; 
+    transition: 0.3s ease;
+}
+.logo2:hover{
+    color: #A52A2A;
+    text-shadow: 0 0 25px #A52A2A,
+                 0 0 50px #A52A2A;
+    transform: scale(1.1);
+}
+
+.alert-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.alert {
+    max-width: 600px; 
+    width: 100%; 
+    border: 2px solid #A52A2A; 
+    border-radius: 5px; 
+    padding: 15px;
+}
