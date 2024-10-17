@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Moon</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
@@ -25,21 +25,59 @@
             height: 100vh;
         }
         .header {
-          position: fixed;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-    }
-
-    .html {
-        scroll-behavior: smooth;
-    }
+        }
+        input {
+        width: 90%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        }
+        .btn-custom {
+            padding: 15px 28px;
+            border: 2px solid #A52A2A;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+        .todo-container {
+            margin-top: 30px;
+        }
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .todo-item.completed span {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .scroll-behavior {
+            scroll-behavior: smooth;
+        }
+        .calculator {
+            background-color: white;
+            padding: 30px;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
     </style>
 </head>
 <body>
 
-  <header class="p-3 text-bg-dark header">
+<header class="p-3 text-bg-dark header">
     <div class="container" id="Home">
         <div class="d-flex flex-wrap align-items-center justify-content-between">
             <h1 class="btn btn-warning">Movie Moon</h1>
@@ -58,17 +96,67 @@
 
 <div class="overlay text-center" id="Homepage">
     <div class="py-5">
-        <h1 class="display-10 fw-bold text-white">Welcome to Movie Moon 🌙</h1>
+        <h1 class="display-10 fw-bold text-white">🌙 Welcome to Movie Moon 🌙</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="fs-5 mb-5">Whether you want to watch a heartwarming novel, an exciting thriller or an epic sci-fi adventure, Movie Moon has it all.</p>
-            <p class="fs-5 mb-5">In Movie Moon, you can plunge into the world of unforgettable stories, fascinating characters, and exciting scenes. Our platform has an extensive collection of movies and TV series of all genres, so everyone will find something for themselves. Join us in the cinema universe from the comfort of your home, here every evening is a movie night!</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="#recommendations" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Select a movie</a>
-                <a href="#Review" class="btn btn-outline-light btn-lg px-4">Reviews</a>
+            <p id="movieText" class="fs-5 mb-5">Whether you want to watch a heartwarming novel, an exciting thriller or an epic sci-fi adventure, Movie Moon has it all</p>
+
+            
+            <!-- Exercise 1 Buttons -->
+            <div class="mb-3 d-flex justify-content-center">
+                <button class="btn btn-outline-info btn-lg px-4 me-2 fw-bold"
+                onclick="document.body.style.backgroundImage='url(./images/inter.jpeg)'"> Show More </button>
+              
+                <button class="btn btn-outline-info btn-lg px-4 me-2 fw-bold"
+                onclick="document.body.style.backgroundImage='url(./images/AAACgvC3RfQpA0iRZt25ptR6XQpGKf5wkYH06qKPiSYA0FBbdIQZAAhIstpLMrNv4_Pbg9QXiSrv0v26KAka0Z8Vd4I.jpg)'">
+                Show More </button>
+              
+                <button class="btn btn-outline-info btn-lg px-4 fw-bold"
+                onclick="document.body.style.backgroundImage='url(./images/1128840.jpg)'"> Show More </button>
             </div>
+
+            <div class="mb-3 d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-info btn-lg px-4 me-2 fw-bold" onclick="document.getElementById('movieText').innerHTML = 'In Movie Moon, you can plunge into the world of unforgettable stories, fascinating characters, and exciting scenes. Our platform has an extensive collection of movies and TV series of all genres, so everyone will find something for themselves. Join us in the cinema universe from the comfort of your home, here every evening is a movie night!'">
+                Read More </button>
+
+                <button class="btn btn-outline-info btn-lg px-4 fw-bold"
+                onclick="document.querySelector('.overlay').style.color = '#ffcc00';"> Change </button>
+                <!-- Exercise 1 Ending -->
+                
+                <div class="d-grid gap-2">
+                    <a href="#recommendations" class="btn btn-outline-light btn-lg px-4">Select a movie</a>
+                    <a href="#Review" class="btn btn-outline-light btn-lg px-4">Reviews</a>
+                </div>
+            </div>
+
+            <!-- Exercise 2 To-Watch List -->
+            <p class="mb-1">Add movies you want to watch</p>
+
+            <div class="todo-container">
+                <input type="text" id="todoInput" class="form-control" placeholder="Enter movie name">
+                <button class="btn btn-outline-light mt-2" id="addButton">Add to Watch</button>
+                <ul id="todoList" class="list-unstyled mt-3"></ul>
+            </div>
+        </div>
         </div>
     </div>
 </div>
+<!-- Exercise 2 Ending -->
+
+<!-- Exercise 3 Sorting -->
+<div class="container px-4 py-5" id="recommendations">
+<h2 class="pb-2 border-bottom" style="color: black;">Number Sorting Tool</h2>
+<p style="color: black;">Enter numbers (space-separated): <input type="text" id="numbersInput"></p>
+<p>
+    <label for="order" style="color: black;">Choose the Sort Order:</label>
+    <select id="order">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+    </select>
+</p>
+<button class="btn-custom" onClick="sortNumbers()">Sort Numbers</button>
+<h2 style="color: black; margin-top: 3%;">Sorted Numbers:</h2>
+<p id="sorted" style="color: black;"></p>
+<!-- Exercise 3 Ending -->
 
 <div class="container px-4 py-5" id="recommendations">
   <h2 class="pb-2 border-bottom" style="color: black;">Recommendations</h2>
@@ -258,7 +346,27 @@
   </div>
 </div>
     
-<!-- Jumbotron with icon -->
+<!-- Exercise 4 Calculator -->
+
+<div class="overlay">
+    <div class="calculator">
+        <h1 style="color: black;" class="logo2">Simple Calculator</h1>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <div class="buttons">
+            <button class="btn-custom" onclick="add()">+</button>
+            <button class="btn-custom" onclick="subtract()">-</button>
+            <button class="btn-custom" onclick="multiply()">*</button>
+            <button class="btn-custom" onclick="divide()">÷</button>
+            <button class="btn-custom" onclick="modulus('%')">%</button>
+            <button class="btn-custom" onclick="power('^')">^</button>
+        </div>
+        <h2 style="color: black;">Result: <span id="so"></span></h2>
+    </div>
+</div>
+
+<!-- Exercise 4 Ending -->
+
 <div class="p-5 text-center bg-body-tertiary" id="Review">
   <div class="container py-5">
     <h1 class="text-body-emphasis" style="margin-bottom: 30px;">Reviews of our Audience</h1>
@@ -285,11 +393,21 @@
         </p>
       </div>
     </div>
-    
   </div>
 </div>
 
-<!-- Footer -->
+<!-- Exercise 5 Tax Calculator -->
+ 
+<div class="overlay">
+<div class="calculator">
+    <h1 style="color: black;" class="logo2">Tax Calculator</h1>
+    <input type="number" id="Price" placeholder="Enter cost" min="0">
+    <button class="btn-custom" onclick="calculateTax()">Calculate Tax</button>
+    <h2>Tax Amount: <span id="taxAmount">$0.00</span></h2>
+</div>
+</div>
+<!-- Exercise 5 Ending -->
+
 <div class="container-fluid" style="background-color:slategray;" id="Aboutus">
     <footer class="py-5">
       <div class="row px-5">
@@ -340,6 +458,6 @@
       </div>
     </footer>
   </div>
-
+  <script src="./index.js"> </script>
 </body>
 </html>
